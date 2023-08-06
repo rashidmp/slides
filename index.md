@@ -15,5 +15,5 @@ class: 'p-16 flex items-center'
 
 # Slides
 
-- [3 Day Workshop](/talks/3-day-workshop)
-- [7 Day Workshop](/talks/7-day-workshop)
+- [3 Day Workshop](./talks/3-day-workshop)
+- [7 Day Workshop](./talks/7-day-workshop)
