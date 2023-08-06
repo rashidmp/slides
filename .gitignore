@@ -1,0 +1,36 @@
+# Editor and IDE files
+.vscode/
+.idea/
+*.iml
+
+# Compiled or built files
+/dist/
+node_modules
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+
+# Environment configuration files
+.env
+.env.local
+.env.*.local
+
+# Log files
+*.log
+
+# Export files and debugging logs
+*-export*
+npm-debug.log*
+
+# Remote assets and TypeScript declaration
+.remote-assets/
+components.d.ts
+
+# PNPM specific
+.pnpm-store/

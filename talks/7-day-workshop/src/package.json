@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /slides/talks/7-day-workshop/ --out ../../../dist/talks/7-day-workshop",
+    "export": "slidev export --timeout 120000 --per-slide --output ../7-day-workshop.pdf"
+  }
+}

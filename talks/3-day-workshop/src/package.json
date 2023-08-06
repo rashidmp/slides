@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /slides/talks/3-day-workshop/ --out ../../../dist/talks/3-day-workshop",
+    "export": "slidev export --per-slide --output ../3-day-workshop.pdf"
+  }
+}
