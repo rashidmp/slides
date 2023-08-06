@@ -1,0 +1,45 @@
+# https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
+name: Build for pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    env:
+      # https://github.com/chalk/supports-color/blob/main/index.js#L21
+      # https://github.com/chalk/supports-color/blob/main/index.js#L54
+      FORCE_COLOR: 1
+      # https://playwright.dev/docs/browsers#skip-browser-downloads
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@master
+        with:
+          # Number of commits to fetch. 0 indicates all history.
+          fetch-depth: 1
+
+      # https://github.com/pnpm/action-setup
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.6.11
+
+      - name: Install 🔧
+        run: pnpm i --frozen-lockfile
+
+      - name: Build 🏗️
+        run: |
+          pnpm build
+
+      - name: Deploy to GH Pages 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
