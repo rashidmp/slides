@@ -7,6 +7,7 @@ Welcome to the Slide Repository! This collection features slide presentations an
 Explore the diverse range of presentations available within this repository:
 
 #### **Workshops**
+- `web` [Internet](./talks/internet) - An immersive introduction to the internet.
 - `web` [3 Day Workshop](./talks/3-day-workshop) - An immersive introduction to basic web development.
 - `web` [7 Day Workshop](./talks/7-day-workshop) - Delve deeper into fundamental web development concepts.
 

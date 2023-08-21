@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "slidev",
+    "build": "slidev build --base /slides/talks/internet/ --out ../../../dist/talks/internet",
+    "export": "slidev export --timeout 120000 --per-slide --output ../internet.pdf"
+  }
+}
